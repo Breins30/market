@@ -19,7 +19,7 @@
 						Codigo producto
 					</td>
 					<td>
-						<input type="text" required name="codprod">
+						<input type="text" required name="codprod" style="width:180">
 					<td>
 				</tr>
 				<tr>
@@ -27,7 +27,7 @@
 						Nombre producto
 					</td>
 					<td>
-						<input type="text" required name="nomprod">
+						<input type="text" required name="nomprod" style="width:180">
 					<td>
 				</tr>
 				<tr>
@@ -35,7 +35,7 @@
 						Cantidad
 					</td>
 					<td>
-						<input type="number" required name="cantprod">
+						<input type="text" required name="cantprod" style="width:180" pattern="[0-9]+" title="Numeros">
 					<td>
 				</tr>
 				<tr>
@@ -43,7 +43,7 @@
 						Estado
 					</td>
 					<td>
-						<select required name="estprod">
+						<select required name="estprod" style="width:180">
 							<option value="">Estado</option>
 							<option value="1">Habilitado</option>
 							<option value="0">Deshabilitado</option>
