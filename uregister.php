@@ -4,9 +4,16 @@
 
     $firstname=$_POST['uname'];
     $lastname=$_POST['ulastname'];
+	$gender = $_POST['gender'];
     $email=$_POST['uemail'];
 	
-	$photo = "images/img_default.png";
+	if($gender=='M'){
+		$photo = "images/boy.png";
+	}else if($gender=='F'){
+		$photo = "images/girl.png";
+	}else{
+		$photo = "images/img_default.png";
+	}
 	
 	$pswd=password_hash($_POST['pswd'],PASSWORD_DEFAULT);
 	//1. Create query

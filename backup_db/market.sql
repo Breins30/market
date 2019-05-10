@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-05-2019 a las 04:56:43
+-- Tiempo de generación: 10-05-2019 a las 18:51:52
 -- Versión del servidor: 10.1.29-MariaDB
 -- Versión de PHP: 7.2.0
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `tienda`
+-- Base de datos: `market`
 --
 
 -- --------------------------------------------------------
@@ -68,7 +68,7 @@ CREATE TABLE `usuarios` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `firstname` varchar(30) COLLATE utf8_bin NOT NULL,
   `lastname` varchar(30) COLLATE utf8_bin NOT NULL,
-  `sexo` varchar(1) COLLATE utf8_bin NOT NULL,
+  `gender` varchar(1) COLLATE utf8_bin NOT NULL,
   `email` varchar(50) COLLATE utf8_bin NOT NULL,
   `password` varchar(50) COLLATE utf8_bin NOT NULL,
   `photo` varchar(50) COLLATE utf8_bin DEFAULT NULL
@@ -78,12 +78,10 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `firstname`, `lastname`, `sexo`, `email`, `password`, `photo`) VALUES
-(1, 'Peter', 'Alonso', '', 'peter@gmail.com', '$2y$10$8UCrEXNSBY3jFVHq720KI.RGnpbmYkG/0OyYipEjkK2', NULL),
-(2, 'Julio', 'Zabala', '', 'peter1@gmail.com', '$2y$10$MmCH/d2H9FwDmmekGOLtceeWRQ0l58wyFFVSCO9u2Xh', NULL),
-(3, 'Maria', 'Zambrano', '', 'maria@hotmail.com', '$2y$10$apZWPOezhSVvkrUDtkrgs.yXSgCMMnHcpmQbh9bELnS', 'images/avatar_default.png'),
+INSERT INTO `usuarios` (`id`, `firstname`, `lastname`, `gender`, `email`, `password`, `photo`) VALUES
 (4, 'Peter', 'Alonso', 'M', 'peter2@gmail.com', '$2y$10$9u5/tv2hdtkAjZRzgHr1W.rLtgxlWtoWxxZwTbDp.lK', 'images/boy.png'),
-(5, 'Karen', 'Zambrano', 'F', 'peter3@gmail.com', '$2y$10$vF9XD7gUgexQ2KiRHS.UaudX4S7wHFGvrP0KsDbDe0C', 'images/girl.png');
+(5, 'Karen', 'Zambrano', 'F', 'peter3@gmail.com', '$2y$10$vF9XD7gUgexQ2KiRHS.UaudX4S7wHFGvrP0KsDbDe0C', 'images/girl.png'),
+(6, 'brayan', 'ra', '', 'bs@gma.com', '$2y$10$cgKC0Mca0KpWl7YnKG7e9uAwa8d8Ns3QQClywmV8CBU', 'images/boy.png');
 
 --
 -- Índices para tablas volcadas
@@ -117,7 +115,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

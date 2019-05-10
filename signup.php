@@ -27,7 +27,15 @@
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
-	
+	<div class="form-group">
+      <label for="uname">Gender:</label>
+      <select class="form-control" name="gender" >
+      <option value='M'>Male</option>
+	  <option value='F'>Female</option>
+	  <option value='O'>Other</option>
+	  </select>
+	  <div class="invalid-feedback">Please fill out this field.</div>
+	</div>
     <div class="form-group">
       <label for="uname">Email:</label>
       <input type="email" class="form-control" id="uemail" placeholder="Enter email" name="uemail" required>
