@@ -13,14 +13,14 @@
 
 <div class="container">
   <h2>Login</h2>
-  <form action="/action_page.php">
+  <form name="form1" action="comprobacionlogin.php" method="POST">
     <div class="form-group">
       <label for="email">Username:</label>
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      <input type="password" class="form-control" id="pswd" placeholder="Enter password" name="pswd">
     </div>
     <div class="form-group form-check">
       <label class="form-check-label">
@@ -34,3 +34,4 @@
 
 </body>
 </html>
+

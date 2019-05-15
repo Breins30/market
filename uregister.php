@@ -22,7 +22,7 @@
 	$result=$conn->query($sql_validation);
 	//3. Validation
 	if($result->num_rows == 0){
-		$sql="INSERT INTO usuarios (firstname, lastname,email, password,photo) VALUES('$firstname','$lastname','$email','$pswd','$photo')";
+		$sql="INSERT INTO usuarios (firstname, lastname,gender,email, password,photo) VALUES('$firstname','$lastname','$gender','$email','$pswd','$photo')";
 		if ($conn->query($sql)===true) {
 			echo "<script language='javascript'>alert('Usuario regisrado con exito')</script>";
 			header("Refresh:0;url=login.php");    
