@@ -25,7 +25,7 @@
 <div class="container">
   <h2>Sign Up</h2>
   <p>Formulario de registro de usuarios</p>
-  <form name="f1"action="uregister.php" class="was-validated" method="POST">
+  <form name="f1"action="uregister.php" class="was-validated" method="POST" enctype="multipart/form-data">
     <div class="form-group">
       <label for="uname">Fisrtname:</label>
       <input type="text" class="form-control" id="uname" placeholder="Enter Firstname" name="uname" required>
@@ -33,22 +33,27 @@
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <div class="form-group">
-      <label for="uname">Lastname:</label>
+      <label for="ulatname">Lastname:</label>
       <input type="text" class="form-control" id="ulastname" placeholder="Enter Lastname" name="ulastname" required>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
 	<div class="form-group">
-      <label for="uname">Gender:</label>
-      <select class="form-control" name="gender" >
+      <label for="id">ID:</label>
+      <input type="number" class="form-control" id="id" placeholder="Enter ID" name="id" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+	<div class="form-group">
+      <label for="gen">Gender:</label>
+      <select class="form-control" name="gender" id="gen" >
       <option value='M'>Male</option>
 	  <option value='F'>Female</option>
 	  <option value='O'>Other</option>
 	  </select>
-	  <div class="invalid-feedback">Please fill out this field.</div>
 	</div>
     <div class="form-group">
-      <label for="uname">Email:</label>
+      <label for="uemail">Email:</label>
       <input type="email" class="form-control" id="uemail" placeholder="Enter email" name="uemail" required>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
@@ -60,12 +65,15 @@
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <div class="form-group">
-      <label for="pwd">Confirmar password:</label>
+      <label for="pwd2">Confirmar password:</label>
       <input type="password" class="form-control" id="pwd2" placeholder="Enter password" name="pswd2" required>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
-    
+    <div class="form-group">
+      <label for="img">Image:</label><br>
+      <input type="file" id="img" name="img" accept="image/png, .jpeg, .jpg, image/gif">
+    </div>
     <button type="button" class="btn btn-primary" onClick="comprobarClave()">Register</button>
   </form>
 </div>
