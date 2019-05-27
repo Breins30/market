@@ -25,7 +25,7 @@
 		$exploarray = explode('.',$_FILES['img']["name"]);
 		$ext=end($exploarray);
 		if(in_array($ext,$extarray)&&$_FILES['img']["size"]<=2000000){
-			$newname = implode('.', [$id,end($exploarray)]);
+			$newname = implode('.', [$id,$ext]);
 			move_uploaded_file($tmp_name, "photos/$newname");
 			$photo = "photos/$newname";
 			$status=TRUE;

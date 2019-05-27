@@ -53,7 +53,7 @@
 
 </body>
 <div class="container">
-  <form action="insert.php" method="post">
+  <form action="insert.php" method="post" enctype="multipart/form-data">
   <h2>Registro de productos</h2>
   <div class="form-group">
     <label for="codigo">Còdigo del Producto:</label>
@@ -74,8 +74,8 @@
   <div class="form-group">
   </div>
   <div class="form-group">
-    <label for="foto">Imagen de producto:</label>
-    <input type="file" class="form-control" id="foto" name="foto" value="Examinar" >
+    <label for="img">Imagen de producto:</label>
+    <input type="file" class="form-control" id="img" name="img" accept="image/png, .jpeg, .jpg, image/gif" required>
   </div>
   <button type="submit" class="btn btn-primary">Registrar</button>
   <button type="reset" class="btn btn-secundary">Cancelar</button>
